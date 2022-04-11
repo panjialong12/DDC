@@ -88,7 +88,7 @@ class DEC(object):
                     gen0 = self.datagen.flow(x, shuffle=True, batch_size=batch_size)
                     while True:
                         batch_x = gen0.next()
-                        yield [batch_x, batch_x]
+                        yield (batch_x, batch_x)
                 else:
                     width = int(np.sqrt(x.shape[-1]))
                     if width * width == x.shape[-1]:  # gray
@@ -100,7 +100,7 @@ class DEC(object):
                     while True:
                         batch_x = gen0.next()
                         batch_x = np.reshape(batch_x, [batch_x.shape[0], x.shape[-1]])
-                        yield [batch_x, batch_x]
+                        yield (batch_x, batch_x)
             self.autoencoder.fit_generator(gen(x, batch_size), steps_per_epoch=int(x.shape[0]/batch_size),
                                            epochs=epochs, callbacks=cb, verbose=verbose,
                                            workers=8, use_multiprocessing=True)
