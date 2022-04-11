@@ -145,7 +145,7 @@ class DEC(object):
 
         features = self.encoder.predict(x)
         print("features shape:", features.shape)
-        features = TSNE(n_components=2).fit_transform(features)
+        features = TSNE(n_components=3).fit_transform(features)
         # np.savetxt("features.txt", features)
         print("features shape:",features.shape)
         y_pred, y_border, center_num ,dc_percent, dc= DenPeakCluster(features)
