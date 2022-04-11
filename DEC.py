@@ -149,11 +149,11 @@ class DEC(object):
         # np.savetxt("features.txt", features)
         print("features shape:",features.shape)
         y_pred, y_border, center_num ,dc_percent, dc= DenPeakCluster(features)
-        print('saving picture to:', save_dir+'/2D.png')
-        plt.cla()
-        plt.scatter(features[:, 0], features[:, 1], c=y_pred, s=0.5, alpha=0.5)
-        plt.savefig(save_dir+'/2D.png')
-        np.savetxt(save_dir+'/dc_coeff.txt', [dc_percent, dc])
+#         print('saving picture to:', save_dir+'/2D.png')
+#         plt.cla()
+#         plt.scatter(features[:, 0], features[:, 1], c=y_pred, s=0.5, alpha=0.5)
+#         plt.savefig(save_dir+'/2D.png')
+#         np.savetxt(save_dir+'/dc_coeff.txt', [dc_percent, dc])
 
         # logging file
         import csv, os
