@@ -80,10 +80,10 @@ if __name__=="__main__":
     verbose = 0
     dbs = ['usps10k']#, 'mnist-test', 'fashion_test']  # 'stl', 'mnist', 'fmnist'
     """exp1: ConvDEC-augae0"""
-    run_exp(dbs, aug_ae=False,
-            expdir='results/exp1-convdec-augae0',
-            ae_weights_dir=None,
-            verbose=verbose, trials=trials)
+#     run_exp(dbs, aug_ae=False,
+#             expdir='results/exp1-convdec-augae0',
+#             ae_weights_dir=None,
+#             verbose=verbose, trials=trials)
     """exp2: ConvDEC-augae1"""
     run_exp(dbs, aug_ae=True,
             expdir='results/exp2-convdec-augae1',
